@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <base target="_top">
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>UJIAN ONLINE SMP NEGERI 9 SINJAI</title>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+<style id='page-skin-1' type='text/css'><!--
+
+--></style>
+<style>
+  body{overflow:hidden;background-color:white}
+   #fullscreen {
+        width: 100vw;
+        height: 100vh;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+  
+  
+  
+  
+ #myTable th{background-color:#808080;color:white}
+#myTable {
+  border-collapse: collapse;
+  
+  
+  font-size: 16px;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding:4px;
+}
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: orange;cursor:pointer;font-size:25px;
+}
+  
+  
+ #myTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+#myTable td:nth-child(3) { display:none }  
+  #myTable td:nth-child(1) { width:25px;text-align:center }  
+   #myTable td:nth-child(2) { width:300px; }  
+  * { margin:0px;padding:0px;font-family: Arial, Helvetica, sans-serif;color:rgba(0,0,0,0.7);}
+@media all and (min-width: 768px) {
+   img{width:10% !important;}
+  #myTable {
+   font-size: 20px;!important;
+  }
+  
+   #myTable td:nth-child(1) { width:50px;text-align:center !important }  
+   #myTable td:nth-child(2) { width:400px; !important}  
+  #jd{ font-size: 20px;!important;}
+  #pass {width:60% !important} 
+  }  
+  #utama{display:none} 
+  #button1{padding:10px;margin-top:220px;font-size:30px; border:none;background:green;color:white;border-radius:15px;cursor:pointer}
+ #header,#freg{margin-top:50px}
+#pass{display:none;border:2px solid  #ddd;font-size:20px;margin:50px 5px;border-radius:10px} 
+ #ok{margin:5px 10px;padding:10px 50px;font-size:20px; border:none;background:green;color:white;border-radius:5px;cursor:pointer}
+ #pin{font-size:30px;border:1px solid #ddd;padding:2px 20px}
+#mkd{position:fixed;top:0px;font-size:14px;font-weight:bold; padding:3px;border:none;background:black;color:white;border-radius:3px;cursor:pointer;display:none}
+  #bop3{font-size:17px; padding:3px  6px;border:none;background:orange;color:white;border-radius:3px;cursor:pointer};
+  #bop3:hover{background:green}
+ #mkd2{position:fixed;right:0px;top:0px;font-size:14px;font-weight:bold;padding:3px;border:none;background:black;color:white;border-radius:3px;cursor:pointer;display:block} 
+#button1{display:none}  
+ #buttonr{padding:10px;margin-top:200px;font-size:30px; border:none;background:green;color:white;border-radius:15px;cursor:pointer;display:none}  
+   #button9,#button10{padding:10px;margin:10px 0px;width:120px; border:none;background:green;color:white;border-radius:5px;cursor:pointer;}
+  #button9:active,#button10:active{background:orange}
+   #buttonl{padding:10px;margin-top:200px;font-size:20px; border:none;background:white;color:black;border-radius:15px;cursor:pointer;}  
+#body {
+            overflow: hidden;
+        }
+  
+   #keluarx{display:none;position:fixed;bottom:30px;left:2px;font-size:17px;background:black;color:white;padding:5px;border-radius:5px;border:none}
+ #keluarx:hover{background:orange;cursor:pointer}
+  img{border-radius:7px}
+  
+  @media all and (min-width: 768px) {
+    #dmu {margin:auto;width:30% !important;
+   }  
+  
+  </style>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body onload='ukr()'>
+<div class='no-items section' id='contoh'></div>
+<center>
+<div id='utama'>
+<div id='header'>
+<!-- <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZM_jeDResxCVVf0nP1qPWJFT0QJZ0857sCR9X2SePYVH1KN_4tihlC-1Mnl1mGc9l_-RBbrMNtZWwVOl-NkucWeKu3RWSASxV4G66r10qMjKdDGLo3brlxhq5VdhGvAShl9MOtnLLfM_HpLOtJSRfzmgK8T7oYvNwF0dYNDx7OcDn_Zbv_sMTlpboJw/s1600/smp99.JPG' style='width:97%'/> -->
+<br/>
+</div>
+<div id='data' style='border:2px solid #ddd;width:90%;margin:30px auto;padding:10px;border-radius:5px'>
+<img src='https://smpn9.github.io/smp.jpg' style='width:50px'/><br/>
+<b>
+<span id='mapel' style='font-size:20px;color:green'></span></b><br/><br/>
+<b>
+<span id='jd'> TOKEN</span><br/>
+</b>
+<input id='btok' oninput='this.value = this.value.toUpperCase()' style='font-size:20px;border:1px solid #ddd;padding:10px;width:100px;border-radius:5px' type='text'/><br/>
+<span id='infor' style='margin-top:10px;font-size:20px;border:1px solid Black;display:none;width:200px;border-radius:5px'></span><br/>
+<button id='button9' onclick='this.disabled=&#39;true&#39;;go(7)'>OK</button>
+<p></p>
+<p></p>
+<p></p>&#169; 2022 SMPN 9 Sinjai
+    
+    </div>
+<audio autoplay='' controls='' id='rdi' name='media' style='display:none'><source src='https://smpn9.github.io/welcome2.mp3' type='audio/mp3'></source></audio>
+<audio autoplay='' controls='' id='rdi2' name='media' style='display:none'><source src='https://smpn9.github.io/tunggu2.mp3' type='audio/mp3'></source></audio>
+<audio autoplay='' controls='' id='rdi3' name='media' style='display:none'><source src='https://smpn9.github.io/masukpin2.mp3' type='audio/mp3'></source></audio>
+<audio autoplay='' controls='' id='rdi4' name='media' style='display:none'><source src='https://smpn9.github.io/pinsalah2.mp3' type='audio/mp3'></source></audio>
+
+<div id='tes'></div>
+<div id='pass'>
+<br/>Silahkan Masukkan PIN [ <button id='bop3' onclick='smp(2)'>Minta PIN</button> ]<br/>
+<input id='pin' maxlength='5' style='width:60px' type='password'/><br/>
+<button id='ok' onclick='goxl()'>OK</button><br/>
+<span id='ket'></span>
+</div>
+<!-- <iframe frameborder='0' height='7737' id='soal' marginheight='0' marginwidth='0' onload='alert(&apos;ok&apos;)' src='https://docs.google.com/forms/d/e/1FAIpQLScVh2T7S4xOepi5yJ2pSK8YT8qfTMa8ZzzgsNPyNqvxBnT0Qg/viewform?embedded=true' style='margin:auto' width='640'>Memuat&#8230;</iframe>-->
+</div>
+<div id='aha' style='border:1px solid white'>
+<button id='buttonl' style='color:black'>
+<img src='https://smpn9.github.io/smp.jpg' style='width:50px'/><br/><i class='fa fa-spinner fa-spin' style='font-size:30px;'></i> Sedang Mengecek Browser Anda</button>
+<button id='button1' onclick='rdi();this. style. display="none" '>&#9758; Mulai Ujian</button>
+<button id='buttonr' onclick='gorr()'>&#9758; Register Browser</button>
+</div>
+</center>
+<div id='freg' style='display: none;border:2px solid #ddd;width:90%;margin:100px auto;padding:10px;border-radius:5px'>
+<center>
+<img src='https://smpn9.github.io/smp.jpg' style='width:50px'/><br/>
+<span id='jdop'> Pilih Kelas</span><br/>
+<select id='bkelas' onchange='gokelas()' style='font-size:20px;border:1px solid #ddd;padding:10px;width:100px;border-radius:5px'>
+<option value='9'>9</option>
+<!--<option value='9B'>9B</option>
+<option value='8A'>8A</option>
+<option value='8B'>8B</option>
+<option value='7A'>7A</option>
+<option value='7B'>7B</option>;;
+<!-- <option value='LAINNYA'>LAINNYA</option>-->
+</select>
+<br/><br/>
+<span id='jdop'> Pilih Nama </span><br/>
+<select id='bnama' style='font-size:20px;border:1px solid #ddd;padding:10px;width:250px;border-radius:5px'>
+<option value=''></option>
+</select><i class='fa fa-spinner fa-spin' id='tugg' style='font-size:30px;color:black'></i>
+<br/><br/>
+<!--<input id='bnama' style='font-size:20px;border:1px solid #ddd;padding:10px;width:300px;border-radius:5px' type='text'/><br/><br/>-->
+<span id='jdop'> Register Silahkan Masukkan Password</span><br/>
+<input id='btok2' style='font-size:20px;border:1px solid #ddd;padding:10px;width:100px;border-radius:5px' type='password'/><br/>
+<span id='infor2' style='margin-top:10px;font-size:20px;border:1px solid Black;display:none;width:300px;border-radius:5px'></span><br/>
+<button id='button10' onclick='regis(1)'>OK</button>
+<p></p>
+<p></p>
+<p></p>&#169; 2022 SMPN 9 Sinjai  
+   </center>
+</div>
+<div id='mkd' onclick='gop()'>KODE:</div>
+<div id='mkd2' style='display:none'>H:</div>
+<input id='myInput' style='display:none' type='text' value='Hello World'/>
+<!--<button id='btn' onclick='myFunction()'>Copy text</button>-->
+<button id='keluarx' ondblclick='keluar()'>Unregister Browser</button>
+<br/><br/>
+<!--<center>
+<div id='doc' style='overflow:scroll'>
+<b> Pelaksanaan Ujian Sekolah(US)<br/>UPTD SMP Negeri 9 Sinjai<br/>Tahun Pelajaran 2023/2024<br/>Tanggal 22 April S/d 27 April 2024</b><br/><br/> <br/> <b>Pelaksanaan Ujian Sekolah(US) Hari Ke-1</b> <br/> <img id='dmu' src='https://smpn9.github.io/US/US0101.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0102.jpg' width='100%'/> <br/> <br/> <b>Pelaksanaan Ujian Sekolah(US) Hari Ke-2</b><br/> <img id='dmu' src='https://smpn9.github.io/US/US0201.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0202.jpg' width='100%'/><br/><br/><b>Pelaksanaan Ujian Sekolah(US) Hari Ke-3</b><br/> <img id='dmu' src='https://smpn9.github.io/US/US0301.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0302.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0304.jpg' width='100%'/><br/><br/> <b>Pelaksanaan Ujian Sekolah(US) Hari Ke-4</b><br/> <img id='dmu' src='https://smpn9.github.io/US/US0401.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0402.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0403.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0403.jpg' width='100%'/><br/><br/> <b>Pelaksanaan Ujian Sekolah(US) Hari Ke-5</b><br/> <img id='dmu' src='https://smpn9.github.io/US/US0501.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0502.jpg' width='100%'/> <br/><br/> <b>Pelaksanaan Ujian Sekolah(US) Hari Ke-6</b><br/> <img id='dmu' src='https://smpn9.github.io/US/US0601.jpg' width='100%'/> <img id='dmu' src='https://smpn9.github.io/US/US0602.jpg' width='100%'/>
+</div>
+</center>-->
+ 
+<script>
+  
+    const elem = document.documentElement;
+  //document.addEventListener('contextmenu', function(event) { event.preventDefault();});
+   
+   
+   document.addEventListener("fullscreenchange", function () {
+    if (!document.fullscreenElement) {
+        // Handle the user exiting fullscreen mode
+        alert("Anda Keluar dari FullScreen Mode");
+       
+    }
+});
+   
+   
+   
+   
+     var getp=('https://www.smpn9sinjai.sch.id/ujian');
+     let dget=getp.split('bin=')
+     if(dget[1] != undefined){
+    document.getElementById('btok').value=dget[1].replace('&m=1','')
+   }
+   
+   var ter77=0;
+   var band=0;
+   let wss=(window.innerHeight) ;band=wss
+  // document.getElementById('mkd2').innerHTML=wss;
+   var xnama=document.getElementById('bnama')
+    var xkelas=document.getElementById('bkelas')
+    var tug=document.getElementById('tugg')
+    var keluary=document.getElementById('keluarx')
+        var dok=document.getElementById('doc')
+         
+var sistem=navigator.userAgent;
+  //alert(navigator.appCodeName ) 
+   var brows=sistem.toUpperCase().indexOf("CHROME");
+  if (brows==-1){alert('Maaf, silahkan Gunakan CHROME');document.getElementById('button1').style.display='none';document.body.innerHTML="<center><div style='margin-top:200px'><h3>Maaf, silahkan gunakan CHROME </h3></div></center>" }
+   
+   var mskode=sistem.toUpperCase().indexOf("WINDOWS");
+   var mhit=0;
+   let xgg='12345'
+    let randomNum = Math.random() * (10 - 1) + 1;
+    var kode1=''; 
+     var register="101";
+     var passd='101'
+    if(localStorage.getItem('mkode')){kode1=localStorage.getItem('mkode')}
+   else {kode1="KODE:"+randomNum.toString().substring(3,8);localStorage.setItem('mkode',kode1) }
+   
+     if(localStorage.getItem('rkode')){register=localStorage.getItem('rkode')}
+   else {register=randomNum.toString().substring(3,10);localStorage.setItem('rkode',register) }
+   
+ document.getElementById('mkd').innerHTML=kode1
+   var mkd=document.getElementById('mkd')
+   var mkd2=document.getElementById('mkd2')
+   var pin=document.getElementById('pin')
+   var ket=document.getElementById('ket')
+   var pass=document.getElementById('pass') 
+   var zz=document.getElementById('rdi') 
+   var zz2=document.getElementById('rdi2')
+  var zz3=document.getElementById('rdi3') 
+   var zz4=document.getElementById('rdi4')
+   
+   var butt1=document.getElementById('button1')
+   var butt2=document.getElementById('buttonr')
+    var butt3=document.getElementById('buttonl')
+   var data=[{"nama":"Ilmu Pengetahuan Sosial (IPS)","id":"https://docs.google.com/forms/d/e/1FAIpQLScVh2T7S4xOepi5yJ2pSK8YT8qfTMa8ZzzgsNPyNqvxBnT0Qg/viewform?embedded=true","size":10812},
+                   {"nama":"PJOK","id":"https://docs.google.com/forms/d/e/1FAIpQLSfy7twK5qlYldZeGn9OLtvtPpzckG1eh33jM8ZGvDW2gu-PZQ/viewform?embedded=true","size":10812},
+                    {"nama":"Prakarya","id":"https://docs.google.com/forms/d/e/1FAIpQLScqL8WCs638BnUSd2FJww-zO5ig3Tz0jwIwuFjL8qhIePPAVg/viewform?embedded=true","size":10812},
+                     {"nama":"Pendidikan Agama Islam (PAI) ","id":"https://docs.google.com/forms/d/e/1FAIpQLScwpOHgEQ43Wx33Hga1bBJ-BgMo0rNkZeNWBTHvwp738X7Y4Q/viewform?embedded=true","size":10812},
+                      {"nama":"Bahasa Indonesia ","id":"https://docs.google.com/forms/d/e/1FAIpQLSdhRU0fEepYDOqY5kTUpwodlHRYdmT1SVY_pjhs7JzGPTUesQ/viewform?embedded=true","size":10812},
+                      {"nama":"Bahasa Inggris ","id":"https://docs.google.com/forms/d/e/1FAIpQLSfyf6jtcMUP1FQ6xubKMksHUX_bvE7EhlmEJV4W0YT-zonbKw/viewform?embedded=true","size":10812},
+                        {"nama":"Matematika ","id":"https://docs.google.com/forms/d/e/1FAIpQLSdTiPC2iJCGwvyrllS7gDbLwc7XWS-J_M1N3_RrfA9R1_DmFw/viewform?embedded=true","size":10812},
+                      {"nama":"PKn ","id":"https://docs.google.com/forms/d/e/1FAIpQLSfQGsS9lLxcN9j6hVH2EamLFp3D4cSKzLyVGfBksDewYYQu-A/viewform?embedded=true","size":10812},
+                      {"nama":"Bahasa Daerah ","id":"https://docs.google.com/forms/d/e/1FAIpQLScSL0HJqyYFFB1uzNXmYO-eWSgTGidf8yoIJr5xKryINNONeg/viewform?embedded=true","size":10812},
+                     {"nama":"Seni Budaya ","id":"https://docs.google.com/forms/d/e/1FAIpQLScFhyy5xzmkBwaNT-z6hNHJXGA5dHock0EJ0w0xWEZgRS4fwA/viewform?embedded=true","size":10812}, 
+  {"nama":"Ilmu Pengetahuan Alam (IPA) ","id":"https://docs.google.com/forms/d/e/1FAIpQLSdKsIXwJ-Y3YRD16IS_dAaoZx2QBvfj0RhkttUjCRMC-tL6hw/viewform?embedded=true","size":10812}
+   
+   
+                    ]
+   
+// data=[{"nama":"Soal Latihan Tes ","id":"https://docs.google.com/forms/d/e/1FAIpQLSc07NcFrcfVWYCqmMFZ8Wn2SYjP2ENOHyHW7N2ekKdLojEnbQ/viewform?usp=sf_link","size":10812}]
+   
+  //  data=[{"nama":"Soal Latihan Tes ","id":"http://localhost:2022/index.php","size":10812}]
+   
+   
+    pin.onkeypress=function(e){if(e.keyCode=='13'){goxl()  } }
+   
+ 
+var gab=''
+var cek=''
+   var ntb=0;
+   var link='';
+  var isi=document.getElementById('data');
+    var judul=document.getElementById('header');
+   var tes=document.getElementById('tes');
+   
+   
+	  var kl1=document.getElementById('buttonr');
+	 var kl2=document.getElementById('freg');
+   
+   
+   
+   
+function gorr(){
+  // dok.style.display='none'
+  //document.documentElement.requestFullscreen();
+      kl1.style.display='none'
+      kl2.style.display='block'
+      gokelas()
+   
+   }
+    
+
+	
+	
+
+function gop(){
+  
+  // myFunction();
+  // keluary.style.display='block';
+   judul.innerHTML=''
+ judul.style.marginTop='0px'
+ window.parent.parent.scrollTo(0, 0)
+ 
+   }   
+ 
+ 
+   
+function go(sg){
+ 
+    
+    //  document.documentElement.requestFullscreen();
+   ukr() ; 
+   
+   let btn9=document.getElementById('button9')
+   
+   let ntok=document.getElementById('btok').value;
+   if(ntok.length==0){btn9.disabled=false;return}
+   
+   
+   btn9.innerHTML="<i class='fa fa-spinner fa-spin' style='font-size:20px;color:white'></i>"+" Proses ..."
+   
+   
+   
+     var xhr = new XMLHttpRequest();
+	// ganti let ab='https://script.google.com/macros/s/AKfycbwJWNK7RAo63miBThhoagrr_fqsJe6-yZQyUNMJ2pnojFx5mN7gQgInN2CTZrvvkgAv/exec?register='+register+'&passd='+passd+'&kode='+sg+'&token='+ntok;
+    let ab='https://script.google.com/macros/s/AKfycbyPMKMTy5rcP8Uw2AugjC7qY_tkjWgpQu1a7np3JWEatcpOekgvPYE_2AlhPIiS7a53/exec?register='+register+'&passd='+passd+'&kode='+sg+'&token='+ntok;
+    
+     xhr.open('get' ,ab, true);
+    xhr.onerror = function() {  
+    
+    btn9.innerHTML='OK'
+        let fgt=document.getElementById('infor')
+     fgt.innerHTML='Jaringan Gangguan'
+   
+    setTimeout(function(){fgt.style.display='none'},2000) 
+   
+   
+   
+   }
+    xhr.onload = function () {
+     var hh=(xhr.responseText);
+   
+      if (hh=='78'){ return}
+     if (hh=='77'){setTimeout(function(){go(78)},30000) ;return}
+   
+     btn9.innerHTML='OK'
+    
+     if (hh == 'noaktif'){
+   
+   let fgt=document.getElementById('infor')
+   fgt.style.display='block'
+   fgt.innerHTML='Maaf token tidak aktif'
+   
+    setTimeout(function(){ btn9.disabled=false;fgt.style.display='none'},4000) 
+      
+   return
+   
+   }
+   
+    
+   if (hh == 'reset'){
+   
+   let fgt=document.getElementById('infor')
+   fgt.style.display='block'
+   fgt.innerHTML='maaf anda sudah 3 kali login'
+   
+    setTimeout(function(){ btn9.disabled=false;fgt.style.display='none'},4000) 
+      
+   return
+   
+   }
+      
+      if(hh != '0'){
+     // mkd.style.display='block'
+    //  mkd2.style.display='block'
+   mhit=1; if (ntb==8){mhit=0}
+   isi.style.display='none'
+   judul.innerHTML="<img src='https://smpn9.github.io/smp.jpg' style='width:50px'/><br/><b>Mohon Tunggu Sedang Memuat Soal ...</b>"
+   zz.pause() ;
+   zz2.play();
+   //height='7737'
+	 
+  //var mdata=	`<iframe frameborder='0' height='7724' id='soal' marginheight='0' marginwidth='0' onload='gop()' src='`+hh+`' style='margin:0px' width='100%'>Memuat&#8230;</iframe>`
+   var mdata=	`<iframe allowfullscreen='true' frameborder='0' height='980px' id='soal' marginheight='0' marginwidth='0' mozallowfullscreen='true' msallowfullscreen='true' onload='gop()' src='`+hh+`' style='border: none; width:100%;max-width:100%; max-height:100vh' webkitallowfullscreen='true' width='640px'>Memuat&#8230;</iframe>`
+
+   tes.innerHTML=mdata
+     setTimeout(function(){go(77)},10000) 
+   
+   }
+   else {
+   let fgt=document.getElementById('infor')
+   fgt.style.display='block'
+   fgt.innerHTML='Token tidak ditemukan'
+   
+    setTimeout(function(){ btn9.disabled=false;fgt.style.display='none'},3000) 
+      
+   
+   
+   }
+   
+       }    
+    
+    
+   
+     
+    xhr.onprogress = function(evt) { }
+    xhr.send();
+   
+   
+   
+   
+ }  
+   
+  function rdi() {
+      document.documentElement.requestFullscreen(); 
+      
+      //dok.style.display='none'; 
+      ukr() ;   keluary.style.display='none';
+   zz2.pause();
+   zz.play();
+   document.getElementById('utama').style.display='block'
+  
+   } 
+   
+ 
+   
+ 
+   window.addEventListener('blur', blurHappenedF);
+      function blurHappenedF()
+      {
+      console.log("blur means user is away");
+   
+      }
+
+   
+  var myInterval;
+  document.addEventListener("visibilitychange", () => {
+   
+   if (mskode==-1){
+   
+    if (document.hidden) {
+      myInterval = setInterval(function(){
+   
+   if (mhit>=1){
+   tes.style.display='none';
+   pass.style.display='block';
+   pin.focus();
+//   zz3.play();
+    }
+   
+   
+   clearInterval(myInterval);   }, 4000); 
+       
+   }
+   else {clearInterval(myInterval)}}
+   
+   
+   else {
+    if (mhit>=1){
+   tes.style.display='none';
+   pass.style.display='block';
+   pin.focus();
+ //  zz3.play();
+    }
+   
+   
+   }
+  
+   
+   
+   
+   
+ 
+   })
+   function goxl(){
+   
+   var bgx=window.atob('MTIzNTQ=');
+ var dss=pin.value;
+  if (dss=='') {pin.focus();return false} 
+   
+  // var dss=prompt('Anda tidak aktif disini jadi Silahkan hubungi pengawas untuk tetap lanjut ')
+   if (dss==bgx || dss==xgg){tes.style.display='block';pass.style.display='none';ket. innerHTML='';pin.value='87665' }
+  else {ket.innerHTML='Maaf, PIN salah'; zz4.play();
+  setTimeout(function(){ket.innerHTML='';pin.focus()},2000) 
+   
+   } 
+   
+   }
+   
+
+   window.addEventListener('focus', focusHappenedF);
+function focusHappenedF()
+      {
+      
+      console.log("focus means user is here");
+    
+   let randomNum = Math.random() * (10 - 1) + 1;
+    xgg=randomNum.toString().substring(3,8) 
+  
+   if (mhit>=1){
+   tes.style.display='none';
+   pass.style.display='block';
+   pin.focus();
+   
+    }
+   
+   
+   
+      }  
+   
+   
+   function smp(nd){
+    if (nd==2){ ket.innerHTML='Sedang di Proses....';}
+    var xhr = new XMLHttpRequest();
+    var ab='https://api.telegram.org/bot6897974728:AAGWffHNbgcsSL7l-VCYlv_CMTZeIyCNrMs/sendMessage?chat_id=-812153615&text='+kode1+'   PIN: '+xgg+'&parse_mode=markdown'
+    xhr.open('GET', ab, true);
+    xhr.onerror = function() {
+   ket.innerHTML='Permintaan Gagal, Silahkan diulangi'
+    setTimeout(function(){ket.innerHTML='';pin.focus()},2000) 
+   
+   }
+    xhr.onload = function () {  
+    // var hh=xhr.responseText; 
+   
+    if (nd==2){ 
+   ket.innerHTML='Permintaan PIN diterima';
+    setTimeout(function(){ket.innerHTML='';pin.focus()},2000) 
+   }
+   }  
+    xhr.onprogress = function(evt) { }
+    xhr.send();
+    }
+   
+   
+  //http://m-edukasi.menantisenja.com/2013/08/kode-html-untuk-membuat-simbol-panah.html 
+  
+   
+  var browser = (function() {
+ var test = function(regexp) {return regexp.test(window.navigator.userAgent)}
+ switch (true) {
+ case test(/edg/i): return "Microsoft Edge";
+ case test(/trident/i): return "Microsoft Internet Explorer";
+ case test(/firefox|fxios/i): return "Mozilla Firefox";
+ case test(/opr\//i): return "Opera";
+ case test(/ucbrowser/i): return "UC Browser";
+ case test(/samsungbrowser/i): return "Samsung Browser";
+ case test(/chrome|chromium|crios/i): return "Google Chrome";
+ case test(/safari/i): return "Apple Safari";
+ default: return "Other";
+ }
+ })();
+ //alert(browser) 
+ 
+  // alert(band)
+ function ukr(){ 
+   
+  
+       
+  band=(window.innerHeight) 
+     
+   
+//if(band<100){ 
+ //if (mskode==-1){ 
+ //document.body.innerHTML="<center><div style='margin-top:200px'><h3>Maaf, kata muhlis Ukuran Layar anda tidak memenuhi syarat</h3></div></center>"   
+ //  return false;
+ //  }
+ // }
+  } 
+   
+    window.onresize = function(event) {
+    
+ let wss=(window.innerHeight) 
+   
+  //document.getElementById('mkd2').innerHTML=wss;
+  
+ //  alert(band-wss)
+ if(band-wss>=370 || wss>1000){
+   let randomNum = Math.random() * (10 - 1) + 1;
+    xgg=randomNum.toString().substring(3,8)
+   
+   
+  if (mhit>=1){
+   //tes.style.display='none';
+  // pass.style.display='block';
+  // pin.focus();
+   //zz3.play();
+    } 
+  } 
+ } 
+   
+  
+// document.body.innerHTML="<center><div style='margin-top:200px'><h3></h3></div></center>"     
+   regis(2)
+   
+   function regis(nn){  
+    let ag=document.getElementById('btok2').value
+   let info2=document.getElementById('infor2')
+   let btn10=document.getElementById('button10')
+   let bxnama=xnama.options[xnama.selectedIndex].text;
+   let bkls=xkelas.options[xkelas.selectedIndex].text;
+   
+    if(localStorage.getItem('rkls')){bkls=localStorage.getItem('rkls')}
+   
+   
+   
+   btn10.innerHTML="<i class='fa fa-spinner fa-spin' style='font-size:20px;color:white'></i>"+" Proses ..."
+   if (nn==1){    
+  
+  if(bxnama.length==0){btn10.innerHTML='OK';return}
+   if(bkls.length==0){btn10.innerHTML='OK';return}
+   
+  if(ag.length==0){btn10.innerHTML='OK';return}
+   passd=ag; 
+   }
+     var xhr = new XMLHttpRequest();
+	// ganti 2 let ab='https://script.google.com/macros/s/AKfycbwJWNK7RAo63miBThhoagrr_fqsJe6-yZQyUNMJ2pnojFx5mN7gQgInN2CTZrvvkgAv/exec?register='+register+'&passd='+passd+'&kode='+nn+'&nama='+bxnama+'&kelas='+bkls;
+   let ab=' https://script.google.com/macros/s/AKfycbyPMKMTy5rcP8Uw2AugjC7qY_tkjWgpQu1a7np3JWEatcpOekgvPYE_2AlhPIiS7a53/exec?register='+register+'&passd='+passd+'&kode='+nn+'&nama='+bxnama+'&kelas='+bkls;
+   
+    
+     xhr.open('get' ,ab, true);
+    xhr.onerror = function() {  
+   //  alert('jaringan gangguan')
+   info2.innerHTML='Jaringan gangguan'
+   info2.style.display='block'
+    setTimeout(function(){info2.style.display='none'},2000) 
+   
+   }
+    xhr.onload = function () {
+     var hh=(xhr.responseText); 
+   
+        let mmk=JSON.parse(hh)
+       hh=mmk.kode
+    
+     butt3.style.display='none'
+     let ket=''
+      btn10.innerHTML='OK'
+     switch(hh) {
+     case '1':
+           ket='Registrasi Berhasil'
+           break;
+      case '2':
+           ket='Browser ini sudah di register'
+           break;
+      case '3':
+           ket='Registrasi Gagal Password Salah'
+           break;
+        case '4':
+           ket='Sudah Register'
+           break;
+      case '5':
+           ket='Belum Register'
+           break;
+       }    
+    
+     if (hh=='1' || hh=='2'|| hh=='3'){
+  // alert(ket)
+   
+    info2.innerHTML=ket
+   info2.style.display='block'
+    setTimeout(function(){info2.style.display='none'},3000) 
+   
+   
+   }
+     if(hh=='5'){butt2.style.display='block';butt1.style.display='none';kl2.style.display='none'}
+      if(hh=='4' || hh=='1'){
+    
+   document.getElementById('btok').value=mmk.text
+ let klss='';
+   if(mmk.kls !=''){
+   klss='Kelas : '+mmk.kls;
+   mkd2.innerHTML=mmk.namaku;
+ // document.getElementById('mapel').innerHTML=mmk.matpel+'<br/><br/>'+klss+'<br/>'
+    document.getElementById('mapel').innerHTML="MATA PEPLAJARAN"+'<br/>'+mmk.matpel+'<br/>';}
+   else {isi.innerHTML="Mapel Ujian Sekolah Belum Diaktifkan<br/>Silahkan Klik tombol refresh jika disuruh pengawas<br/><br/><button onclick='goref(this)' style='padding:10px;font-size:18px;border-radius:5px;background:green;color:white'>Refresh</button>"}
+ butt1.style.display='block' ;
+ keluary.style.display='block';
+  
+
+   
+   butt2.style.display='none';kl2.style.display='none'}
+   
+      
+   }  
+    xhr.onprogress = function(evt) { }
+    xhr.send();
+   }
+   
+   let agg=document.getElementById('btok2')
+   function gokelas(){
+     tug.style.color='black'
+    let bkl=xkelas.options[xkelas.selectedIndex].text;
+    localStorage.setItem('rkls',bkl);
+   xnama.disabled=true
+   agg.disabled=true
+    var xhr = new XMLHttpRequest();
+    let ab='https://script.google.com/macros/s/AKfycbxiXSzPhEBXAfZ4FNLNi9-2QNhtBfmHHhKnoV0fpyXWm-OabXULAJDZCrIHwaaeGnml/exec?kelas='+bkl
+  
+  
+    xhr.open('GET', ab, true);
+    xhr.onerror = function() {
+   
+   }
+    xhr.onload = function () {  
+    var hh=xhr.responseText; 
+    xnama.disabled=false;
+   agg.disabled=false
+  xnama.innerHTML=hh
+   tug.style.color='white'
+   }
+     
+    xhr.onprogress = function(evt) { }
+    xhr.send();
+    
+   
+   
+   }
+   
+   
+   function myFunction() {
+   
+  var copyText = document.getElementById("myInput");
+var hit=0;
+var bar='' 
+function makeid(length) {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < length) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return ('😂 Nyontek Ya ? : '+result);
+}
+
+
+
+gole()
+function gole(){
+setTimeout(function() {
+hit++;
+
+ bar=makeid(20)
+copyText.value=bar
+copyText.select();
+ // copyText.setSelectionRange(0, 99999); // For mobile devices
+ 
+navigator.clipboard.writeText(copyText.value);
+  
+
+;gole()}, 500)
+}
+}
+   
+ 
+function goref(gb){
+  gb.style.display='none';
+  window.location.href='https://www.smpn9sinjai.sch.id/ujian'
+ 
+   }
+ function keluar(){ 
+   var cbb=confirm('Yakin akan di Unregister ...?')
+    if (cbb==true){
+   
+   localStorage.removeItem('mkode');
+   localStorage.removeItem('rkode');
+   localStorage.removeItem('rkls');
+    alert('Sukses Unregister')  
+   window.open('https://www.smpn9sinjai.sch.id/ujian', '_self');}
+   }
+   
+   
+ 
+  </script>
+
+</body>
+</html>

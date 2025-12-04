@@ -497,13 +497,29 @@ function go(sg){
    } 
    
    }
+
+
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+         
+   let randomNum = Math.random() * (10 - 1) + 1;
+    xgg=randomNum.toString().substring(3,8) 
+  
+   if (mhit>=1){
+   tes.style.display='none';
+   pass.style.display='block';
+   pin.focus();
    
+    }
+    }
+});
+	
 
    window.addEventListener('focus', focusHappenedF);
 function focusHappenedF()
       {
       
-      console.log("focus means user is here");
+    //  alert("focus means user is here");
     
    let randomNum = Math.random() * (10 - 1) + 1;
     xgg=randomNum.toString().substring(3,8) 
